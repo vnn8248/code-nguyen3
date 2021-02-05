@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.btn {
+    color: $light-font-color;
+    background: $palette-4;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover,
+    &:hover i {
+        background: $palette-3;
+        color: $light-font-color;
+    }
+}
+
+.btnLight {
+    @extend .btn;
+    color: $dark-font-color;
+    background: $light-background-color;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+}
+
+.onScroll {
+    background: white;
+    color: black;
+    border-bottom: 2px solid lightgray;
+    z-index: 10;
+}

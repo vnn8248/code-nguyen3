@@ -1,0 +1,93 @@
+@import "../scss/variables";
+
+.outer {
+    display: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid rgba($dark-background-color, 0.1);
+    box-shadow: 0px 3px 8px rgba($dark-background-color, 5%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    color: $dark-font-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    .logo {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .toggler {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+
+        li {
+            color: $dark-font-color;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 5px;
+        }
+    }
+
+    .socialIcons ul {
+        justify-content: flex-end;
+
+        // Select first two children
+        li:nth-child(-n + 2) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.footerNavbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    color: $light-font-color;
+    width: 100%;
+    margin-top: 10px;
+
+    .logo {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    .socialIcons ul {
+        justify-content: flex-end;
+
+        // Select first two children
+        li:nth-child(-n + 2) {
+            margin-right: 10px;
+        }
+    }
+
+    .socialIcons ul li {
+        background: $light-background-color;
+        padding: 5px;
+        border-radius: $border-radius5;
+    }
+}

@@ -1,0 +1,29 @@
+.skillRow {
+    padding: 20px 100px;
+
+    h3 {
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.progress {
+    overflow: hidden;
+    height: 20px;
+    background: lightgray;
+    border-radius: 5px;
+
+    div {
+        height: 100%;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skillRow {
+        padding: 20px 30px;
+    }
+}

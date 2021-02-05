@@ -1,0 +1,23 @@
+$dark-font-color: #333;
+$medium-font-color: #738a94;
+$light-font-color: #fff;
+$light-blue-grey: #e9f0f2;
+
+$light-blue-grey-background-color: radial-gradient(
+    circle farthest-corner at right bottom,
+    #e9f0f2 0,
+    #fcfeff 100%
+);
+$dark-background-color: #3d405b;
+$light-background-color: #f3f3f3;
+
+$palette-1: #3d405b;
+$palette-2: #f4f1de;
+$palette-3: #e07a5f;
+$palette-4: #81b29a;
+$palette-5: #f2cc8f;
+
+$border-radius5: 5px;
+
+$box-shadow-full-light: 3px 3px 3px 3px rgba($dark-background-color, 0.01),
+    -3px -3px 3px 3px rgba($dark-background-color, 0.01);

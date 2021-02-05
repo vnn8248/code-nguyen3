@@ -1,0 +1,20 @@
+{
+  "name": "code-nguyen3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tryghost/content-api": "^1.4.13",
+    "bootstrap": "^4.6.0",
+    "date-fns": "^2.16.1",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-dom": "17.0.1",
+    "sass": "^1.32.5"
+  }
+}

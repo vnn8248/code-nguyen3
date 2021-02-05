@@ -1,0 +1,88 @@
+@import "../scss/variables";
+
+.footer {
+    background: $dark-background-color;
+    color: $light-font-color;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    width: 100%;
+
+    .top {
+        border-bottom: 2px solid $palette-2;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+        .column {
+            width: 50%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .formInputRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .formInput {
+                margin-bottom: 20px;
+                width: 48%;
+            }
+        }
+
+        .formInput,
+        .formMessage {
+            font-family: inherit;
+            padding: 10px;
+            border-radius: $border-radius5;
+            border: none;
+
+            &:focus {
+                background: $palette-2;
+                font-weight: 600;
+            }
+        }
+
+        .antispam {
+            display: none;
+        }
+
+        .formMessage {
+            width: 100%;
+            height: 100px;
+        }
+
+        .formSubmit {
+            width: 100%;
+        }
+    }
+
+    .signature {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        padding: 100px 30px 50px 30px;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            .column {
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
+}

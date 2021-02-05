@@ -1,0 +1,6 @@
+@import "../scss/variables";
+@import "../modules/BlogHome.module.scss";
+
+.cardContainer {
+    @extend .cardContainer;
+}

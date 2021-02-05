@@ -1,0 +1,38 @@
+@import "../scss/variables";
+@import "../modules/Tech.module.scss";
+
+.resume {
+    background: $light-background-color;
+    color: $dark-font-color;
+}
+
+.table {
+    margin-top: 20px;
+    padding: 20px;
+    color: $dark-font-color;
+    border-radius: $border-radius5;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        background: $light-background-color;
+        border-radius: $border-radius5;
+        padding-top: 20px;
+    }
+}
+
+.used {
+    text-align: center;
+}
+
+.used:before {
+    content: "*";
+    margin-right: 10px;
+    font-size: 2rem;
+    color: $palette-3;
+}

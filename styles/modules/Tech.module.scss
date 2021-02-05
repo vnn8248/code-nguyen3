@@ -1,0 +1,28 @@
+@import "../scss/variables";
+
+.techItem {
+    background: white;
+    border-radius: $border-radius5;
+    box-shadow: $box-shadow-full-light;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+
+    &:hover {
+        box-shadow: 2px 2px 3px 1px $palette-4;
+    }
+
+    h5 {
+        margin-left: 20px;
+    }
+
+    .used:before {
+        content: "*";
+        margin-right: 10px;
+        font-size: 2rem;
+        color: $palette-3;
+    }
+}
