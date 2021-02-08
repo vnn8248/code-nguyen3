@@ -1,7 +1,5 @@
 // Styles
 import styles from "../../styles/modules/BlogPost.module.scss";
-
-
 // Components
 import Date from "../../components/Date";
 import Navbar from "../../components/Navbar";
@@ -40,7 +38,7 @@ export async function getStaticProps({ params }) {
 function Post({ post }) {
 
   console.log(post);
-  console.log(post.html);
+  // console.log(post.html);
 
   
   return (

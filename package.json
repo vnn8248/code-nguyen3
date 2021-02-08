@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tryghost/content-api": "^1.4.13",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "date-fns": "^2.16.1",
     "next": "10.0.5",
