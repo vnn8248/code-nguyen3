@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
+import SocialIcons from "./SocialIcons";
 import styles from "../styles/modules/Header.module.scss";
 
 function Header() {
   return (
     <header className={styles.hero}>
-
-        <Navbar />
 
         <div className={styles.content}>
           <img src="/svg/avataaars-bn.svg" className={styles.avatar}></img>
@@ -14,23 +13,7 @@ function Header() {
           <p>I'm a full stack web developer.</p>
           <p>Welcome to my online portfolio.</p>
           <div className={styles.socialIcons}>
-            <ul>
-              <li>
-                <a href="https://github.com/vnn8248">
-                  <img src="/svg/github.svg" ></img>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/vnn8248">
-                  <img src="/svg/linkedin.svg" ></img>
-                </a>
-              </li>
-              <li>
-                <a href="#contact">
-                  <img src="/svg/email.svg" ></img>
-                </a>
-              </li>
-            </ul>
+            <SocialIcons />
           </div>
         </div>
 

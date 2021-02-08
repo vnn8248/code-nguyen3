@@ -1,93 +1,199 @@
 @import "../scss/variables";
 
 .outer {
-    display: sticky;
-    top: 0;
     background: #fff;
     border-bottom: 1px solid rgba($dark-background-color, 0.1);
-    box-shadow: 0px 3px 8px rgba($dark-background-color, 5%);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    box-shadow: 0px 5px 10px rgba($dark-background-color, 10%);
 }
-
 .navbar {
-    color: $dark-font-color;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
 
     .logo {
-        display: block;
         width: 50px;
         height: 50px;
     }
 
-    .toggler {
+    // Mobile menu
+    .menuIcon {
+        display: block;
+    }
+
+    // Mobile menu overlay
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 99px;
+        left: -150%;
+        transition: all 0.5s ease;
+
+        // When the menu icon is clicked
+        &.active {
+            background: #fff;
+            left: 0;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 100;
+        }
+
+        .navItems {
+            color: $palette-1;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            padding: 2rem;
+            width: 100%;
+            display: table;
+            border-bottom: 1px solid rgba($dark-background-color, 0.1);
+        }
+    }
+
+    .socialIcons {
         display: none;
     }
+}
 
-    ul {
-        display: flex;
-    }
+.footerOuter {
+    background: inherit;
 
-    nav ul {
-        justify-content: space-evenly;
+    .footerNavbar {
+        @extend .navbar;
 
-        li {
-            color: $dark-font-color;
-            font-weight: 600;
-            padding: 10px 20px;
-            margin: 0 5px;
+        .logo {
+            width: 50px;
+            height: 50px;
         }
-    }
 
-    .socialIcons ul {
-        justify-content: flex-end;
+        .footerNavMenu {
+            display: none;
+        }
 
-        // Select first two children
-        li:nth-child(-n + 2) {
-            margin-right: 10px;
+        .socialIcons {
+            display: block;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                // Select first two children
+                li:nth-child(-n + 2) {
+                    margin-right: 30px;
+                }
+            }
         }
     }
 }
 
-.footerNavbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    color: $light-font-color;
-    width: 100%;
-    margin-top: 10px;
-
-    .logo {
-        display: block;
-        width: 50px;
-        height: 50px;
+@media screen and (min-width: 1024px) {
+    .outer {
+        background: #fff;
+        border-bottom: 1px solid rgba($dark-background-color, 0.1);
+        box-shadow: 0px 3px 8px rgba($dark-background-color, 5%);
     }
 
-    ul {
-        display: flex;
-    }
+    .navbar {
+        margin: auto;
 
-    nav ul {
-        justify-content: space-evenly;
-    }
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
 
-    .socialIcons ul {
-        justify-content: flex-end;
+        .menuIcon {
+            display: none;
+        }
 
-        // Select first two children
-        li:nth-child(-n + 2) {
-            margin-right: 10px;
+        .navMenu {
+            display: flex;
+            flex-direction: row;
+            position: static;
+            height: auto;
+
+            & > * {
+                margin: 0 10px;
+            }
+            .navItems {
+                color: $palette-1;
+                font-weight: 500;
+                font-size: 14px;
+                text-align: center;
+                padding: 0px;
+                display: inline-block;
+                border: none;
+            }
+        }
+
+        .socialIcons ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin: 0 10px;
+            }
         }
     }
 
-    .socialIcons ul li {
-        background: $light-background-color;
-        padding: 5px;
-        border-radius: $border-radius5;
+    .footerNavbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        color: $light-font-color;
+        width: 100%;
+        margin-top: 10px;
+
+        .logo {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+
+        .socialIcons ul {
+            justify-content: flex-end;
+
+            // Select first two children
+            li:nth-child(-n + 2) {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar {
+        max-width: 1200px;
+
+        .navMenu {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .navItems a:hover {
+            color: $palette-4;
+            text-decoration: none;
+        }
+
+        .socialIcons {
+            display: block;
+
+            ul li a i {
+                color: $palette-1;
+
+                &:hover {
+                    color: $palette-4;
+                }
+            }
+        }
+    }
+
+    .footerNavbar {
+        .socialIcons {
+            ul li a i {
+                color: #fff !important;
+            }
+        }
     }
 }

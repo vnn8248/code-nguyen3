@@ -2,6 +2,11 @@
 
 .hero {
     height: 100vh;
+    background: radial-gradient(
+        circle farthest-corner at right bottom,
+        #e9f0f2 0,
+        #fcfeff 100%
+    );
     color: $dark-font-color;
     position: relative;
 }
@@ -16,18 +21,22 @@
     padding: 0 20px;
 
     .avatar {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+    }
+
+    h1,
+    p {
+        margin-bottom: 10px;
     }
 
     h1 {
-        font-size: 55px;
+        font-size: 36px;
     }
 
     p {
-        font-size: 23px;
+        font-size: 16px;
         max-width: 600px;
-        margin: 20px 0;
     }
 
     .socialIcons ul {
@@ -37,17 +46,25 @@
         align-items: center;
         padding: 0;
         margin-top: 20px;
-    }
 
-    .socialIcons ul li {
-        margin: 0 20px;
-    }
+        li {
+            margin: 0 20px;
 
-    .socialIcons ul li a img {
-        width: 50px;
-        height: 50px;
-        border: 1px $dark-font-color solid;
-        border-radius: 50%;
-        padding: 10px;
+            a {
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 1px 1px 5px rgba(#e9f0f2, 1);
+                position: relative;
+                padding: 20px 30px;
+
+                i {
+                    color: $palette-1;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+            }
+        }
     }
 }

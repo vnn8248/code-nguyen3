@@ -1,10 +1,5 @@
 @import "./variables.scss";
 
-.container {
-    margin: auto;
-    max-width: 1200px;
-}
-
 .btn {
     color: $light-font-color;
     background: $palette-4;
@@ -33,11 +28,4 @@
 .heading {
     text-align: center;
     font-size: 36px;
-}
-
-.onScroll {
-    background: white;
-    color: black;
-    border-bottom: 2px solid lightgray;
-    z-index: 10;
 }

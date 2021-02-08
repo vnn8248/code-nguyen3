@@ -1,6 +1,7 @@
 // Styles
 import styles from "../../styles/modules/BlogPost.module.scss";
 
+
 // Components
 import Date from "../../components/Date";
 import Navbar from "../../components/Navbar";
@@ -38,63 +39,64 @@ export async function getStaticProps({ params }) {
 // Render post
 function Post({ post }) {
 
-
-  // let el = React.createElement("html");
-  // el.dangerouslySetInnerHTML = JSON.parse(JSON.stringify(post.html));
-  // const headings = Array.from(el.querySelectorAll("h1,h2,h3,h4,h5,h6"));
-
-
-
   console.log(post);
+  console.log(post.html);
 
+  
   return (
-    <div className={styles.outer}>
-      {/* <Head>
-        <title>{post.meta_title} | Code Nguyen. The Blog.</title>
-        <description>{post.meta_description}</description>
-      </Head> */}
-      <Navbar />
+    <div>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <div className={`container ${styles.postGrid}`}>
-        <div className={`${styles.aside} ${styles.socialIcons}`}>
-          <h4 className={styles.asideTitle}>Share</h4>
-          <ul>
-            <li><a><img src="/svg/medium.svg" className={styles.socialIcon}></img></a></li>
-            <li><a><img src="/svg/facebook.svg" className={styles.socialIcon}></img></a></li>
-            <li><a><img src="/svg/twitter.svg" className={styles.socialIcon}></img></a></li>
-            <li><a><img src="/svg/heart.svg" className={styles.socialIcon}></img></a></li>
-          </ul>
-        </div>
-        <div>
-          <div className={styles.postHeader}>
-            <h1 className={`${styles.postTitle} ${styles.second}`}>{post.title}</h1>
-            <div className={styles.postMeta}>
-              <p className={styles.postAuthor}>{post.authors[0].name}</p>
-              <Date dateString={post.published_at} />
-              <p className={styles.postMinuteRead}>{post.reading_time} minute read</p>
-            </div>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"></link>
+        <link rel="stylesheet" href=""></link>
+        <title>{post.meta_title} | Code Nguyen</title>
+        <meta name="description" content={post.meta_description} />
+        <meta name="keywords" content={post.tags.map(tag => tag.name)} />
+        <meta name="author" content={post.authors[0].name} />
+      </Head>
+      <div className={styles.outer}>
+        <Navbar />
+
+        <div className={styles.postGrid}>
+          <div className={`${styles.aside} ${styles.socialIcons}`}>
+            <h4 className={styles.asideTitle}>Share</h4>
+            <ul>
+              <li><a><img src="/svg/medium.svg" className={styles.socialIcon}></img></a></li>
+              <li><a><img src="/svg/facebook.svg" className={styles.socialIcon}></img></a></li>
+              <li><a><img src="/svg/twitter.svg" className={styles.socialIcon}></img></a></li>
+              <li><a><img src="/svg/heart.svg" className={styles.socialIcon}></img></a></li>
+            </ul>
           </div>
-          <img className={styles.postFeatureImage} src={post.feature_image} alt={post.title} />
 
-          <div className={styles.postContent} dangerouslySetInnerHTML={{__html: post.html}}></div>
+          <div className={styles.main}>
+            <div className={styles.postHeader}>
+              <h1 className={`${styles.postTitle} ${styles.second}`}>{post.title}</h1>
+              <div className={styles.postMeta}>
+                <p className={styles.postAuthor}>{post.authors[0].name}</p>
+                <Date dateString={post.published_at} />
+                <p className={styles.postMinuteRead}>{post.reading_time} minute read</p>
+              </div>
+            </div>
+            <img className={styles.postFeatureImage} src={post.feature_image} alt={post.title} />
+
+            <div className={styles.postContent} dangerouslySetInnerHTML={{__html: post.html}}></div>
+            
+          </div>
+
+          <div className={`${styles.aside} ${styles.tableOfContents}`}>
+            <h4 className={styles.asideTitle}>On this page</h4>
+            <ul>
+            </ul>
+          </div>
 
         </div>
-        <div className={`${styles.aside} ${styles.tableOfContents}`}>
-          <h4 className={styles.asideTitle}>On this page</h4>
-          <ul>
-            {/* <li><strong>{post.title}</strong></li> */}
-            {/* {headings.map(heading => {
-                return <li>{heading}</li>
-              })} */}
-          </ul>
-        </div>
+        <Footer />
+
 
       </div>
-      <Footer />
-
-
     </div>
-    
   )
 };
 

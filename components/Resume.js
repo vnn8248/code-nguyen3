@@ -8,7 +8,7 @@ import Tech from "./Tech";
 
 function Resume() {
   return (
-    <section id="resume" className={styles.resume}>
+    <section id="skills" className={styles.resume}>
 
       <div className="container">
 

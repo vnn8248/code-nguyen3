@@ -1,7 +1,9 @@
 @import "../scss/variables";
+@import "~bootstrap/scss/bootstrap";
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 html,
@@ -56,8 +58,8 @@ img {
 }
 
 section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 pre {
@@ -66,4 +68,26 @@ pre {
     border-radius: 5px;
     padding: 20px;
     color: $palette-1;
+}
+
+blockquote {
+    border-left: 2px solid $palette-3;
+    margin: 10px;
+    padding-left: 10px;
+
+    &:before,
+    &:after {
+        font-size: 2rem;
+        color: $palette-4;
+        line-height: 0.2;
+        vertical-align: -0.5rem;
+    }
+
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
 }

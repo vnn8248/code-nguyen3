@@ -7,140 +7,199 @@
         #e9f0f2 0,
         #fcfeff 100%
     );
-}
+    width: 100%;
 
-.postGrid {
-    background: #fff;
-    box-shadow: 3px 3px 3px 3px rgba($dark-background-color, 0.01),
-        -3px -3px 3px 3px rgba($dark-background-color, 0.01);
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 100px 2fr 100px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
+    .postGrid {
+        background: #fff;
+        box-shadow: 3px 3px 3px 3px rgba($dark-background-color, 0.01),
+            -3px -3px 3px 3px rgba($dark-background-color, 0.01);
+        border-radius: 5px;
+        margin-top: 100px;
+        margin-bottom: 100px;
 
-.aside {
-    padding: 20px;
-
-    .asideTitle {
-        font-size: 10px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $medium-font-color;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    .socialIcon {
-        display: block;
-        margin: 10px auto;
-        width: 30px;
-        height: 30px;
-    }
-}
-
-.postHeader {
-    padding-left: 200px;
-    padding-right: 200px;
-
-    .postTitle {
-        font-size: 56px;
-        text-align: left;
-        margin: 50px auto;
-    }
-
-    .postMeta {
-        color: $dark-font-color;
-        text-align: left;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-        .postAuthor {
-            color: $dark-font-color;
-            font-weight: 700;
+        .aside {
+            display: none;
         }
 
-        .postMinuteRead {
-            @extend .postDate;
-
-            &:before {
-                content: "|";
-                font-weight: bold;
-                color: $dark-font-color;
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-        }
-    }
-
-    .postFeatureImage {
-        display: block;
-        margin: auto;
-    }
-}
-
-.postContent {
-    line-height: 1.6;
-    margin: 100px auto;
-    padding-left: 150px;
-    padding-right: 150px;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    max-width: 1200px;
-
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 20px;
-    }
-
-    ol li,
-    ul li {
-        list-style-type: decimal;
-        position: relative;
-        left: 20px;
-        margin-bottom: 10px;
-    }
-
-    ul li {
-        list-style-type: disc;
-    }
-
-    a {
-        color: $dark-font-color;
-        font-weight: 600;
-        border-bottom: 2px solid $palette-3;
-        position: relative;
-
-        a:hover {
-            display: inline-block;
-            position: absolute;
+        .main {
             width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            background: $palette-3;
-            animation: highlight 2s;
         }
 
-        @keyframes highlight {
-            from {
-                width: 0;
-                opacity: 0;
+        .postHeader {
+            padding: 20px;
+
+            .postTitle {
+                font-size: 3rem;
+                text-align: left;
+                margin: 50px auto;
             }
-            to {
-                width: 100%;
-                opacity: 1;
+
+            .postMeta {
+                color: $dark-font-color;
+                font-size: 1rem;
+                text-align: left;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                .postAuthor {
+                    color: $dark-font-color;
+                    font-weight: 700;
+                }
+
+                .postMinuteRead {
+                    @extend .postDate;
+
+                    &:before {
+                        content: "|";
+                        font-weight: bold;
+                        color: $dark-font-color;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .postFeatureImage {
+                display: block;
+                margin: auto;
             }
         }
+
+        .postContent {
+            line-height: 1.6;
+            padding: 100px 0px;
+
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            ol,
+            ul {
+                display: block;
+                padding-left: 40px;
+                padding-right: 40px;
+                width: 100%;
+            }
+
+            ol li {
+                list-style-type: decimal;
+                margin-bottom: 10px;
+            }
+
+            ul li {
+                list-style-type: disc;
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: $dark-font-color;
+                font-weight: 600;
+                border-bottom: 2px solid $palette-4;
+                position: relative;
+            }
+        }
+    }
+}
+
+// Tablet screen styles
+@media only screen and (min-width: 768px) {
+    .outer .postGrid {
+        .postHeader {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .postContent {
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            ol,
+            ul {
+                padding-left: 75px;
+                padding-right: 75px;
+            }
+
+            pre,
+            blockquote {
+                width: 80%;
+                margin: 50px auto;
+            }
+
+            figure {
+                width: 90%;
+                margin: auto;
+            }
+
+            figure img {
+                display: block;
+                margin: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Large tablet screens (iPad Pro)
+@media only screen and (min-width: 1024px) {
+    .outer .postGrid {
+        .postHeader {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .postContent {
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+            ol,
+            ul {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+
+            figure {
+                width: 95%;
+            }
+
+            figure img {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}
+
+// Laptops
+@media only screen and (min-width: 1200px) {
+    .outer .postGrid {
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

@@ -1,5 +1,6 @@
 // Components
 import Head from 'next/head';
+import Navbar from "../components/Navbar";
 import Header from "../components/header";
 import About from "../components/About";
 import Resume from "../components/Resume";
@@ -40,6 +41,7 @@ function Home( { posts, pages } ) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"></link>
         <title>Code Nguyen | {home}</title>
       </Head>
+      <Navbar />
       <Header />
       <About content={pages}/>
       <Resume />
