@@ -57,7 +57,7 @@ function ContactForm() {
     if (check) {
       setFormData({buttonText: "Sending..."})
 
-      axios.post(process.env.NODE_API_URL, formData)
+      axios.post(process.env.CN_API_URL, formData)
         .then(res => {
           console.log(res);
           if (res.data.status === "sent") {
