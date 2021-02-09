@@ -35,9 +35,3 @@ function Blog(props) {
 }
 
 export default Blog;
-
-{/* <li key={post.id}>
-  <Link href={`/blog/${post.slug}`}>
-    <a>{post.title}</a>
-  </Link>
-</li> */}
