@@ -22,17 +22,8 @@ module.exports = (phase, { defaultConfig }) => {
       webpack: (config, options) => {
         config.module.rules.push({
           test: /\.(png|jpe?g|gif|svg)$/i,
-          use: [
-            options.defaultLoaders.babel,
-            {
-              loader: "file-loader",
-              options: {
-                outputPath: '../public/', // if you don't use ../ it will put it inside ".next" folder by default
-                publicPath: '/',
-                },
-            },
-          ],
-        })
+          loader: require.resolve("url-loader"),
+        });
         return config;
       },
     }  
