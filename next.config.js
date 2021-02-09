@@ -19,15 +19,7 @@ module.exports = (phase, { defaultConfig }) => {
         CONTENT_API_URL: "https://code-nguyen3-ghost.herokuapp.com",
         CN_API_URL: "https://blooming-sands-31061.herokuapp.com/"
       },
-      webpack: (config, options) => {
-        config.module.rules.push({
-          test: /\.(png|jpe?g|gif|svg)$/i,
-          loader: require.resolve("url-loader"),
-        });
-        return config;
-      },
     }  
   }
-
 }
 
