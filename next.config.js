@@ -18,7 +18,15 @@ module.exports = (phase, { defaultConfig }) => {
         CONTENT_API_KEY: "db12fc51133acab5c30a5c6fc6",
         CONTENT_API_URL: "https://code-nguyen3-ghost.herokuapp.com",
         CN_API_URL: "https://blooming-sands-31061.herokuapp.com/"
-      }
+      },
+      webpack: config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+        outputPath: '../public/', // if you don't use ../ it will put it inside ".next" folder by default
+        publicPath: '/',
+        }
+      }),
     }  
   }
 

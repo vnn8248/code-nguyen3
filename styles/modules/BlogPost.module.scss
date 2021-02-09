@@ -201,5 +201,12 @@
         max-width: 780px;
         margin-left: auto;
         margin-right: auto;
+
+        .postContent {
+            a:hover {
+                text-decoration: none;
+                color: $palette-3;
+            }
+        }
     }
 }
