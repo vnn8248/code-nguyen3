@@ -19,14 +19,19 @@ module.exports = (phase, { defaultConfig }) => {
         CONTENT_API_URL: "https://code-nguyen3-ghost.herokuapp.com",
         CN_API_URL: "https://blooming-sands-31061.herokuapp.com/"
       },
-      webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+      webpack: (config, options) => {
         config.module.rules.push({
           test: /\.(png|jpe?g|gif|svg)$/i,
-          loader: "file-loader",
-          options: {
-          outputPath: '../public/', // if you don't use ../ it will put it inside ".next" folder by default
-          publicPath: '/',
-          }
+          use: [
+            options.defaultLoaders.babel,
+            {
+              loader: "file-loader",
+              options: {
+                outputPath: '../public/', // if you don't use ../ it will put it inside ".next" folder by default
+                publicPath: '/',
+                },
+            },
+          ],
         })
         return config;
       },
