@@ -96,5 +96,10 @@
     .footer {
         padding-left: 200px;
         padding-right: 200px;
+
+        .outer {
+            max-width: 1200px;
+            margin: auto;
+        }
     }
 }

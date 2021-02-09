@@ -10,7 +10,7 @@ const year = d.getFullYear();
 function Footer() {
   return (
     <footer id="contact" className={styles.footer}>
-
+      <div className={styles.outer}>
         <div className={styles.top}>
           <div className={styles.column}>
             <h2>Let's Work Together</h2>
@@ -28,7 +28,7 @@ function Footer() {
           />
         </div>
         <p className={styles.signature}>Built by me. &#169; {year}</p>
-  
+      </div>
       
     </footer>
 
