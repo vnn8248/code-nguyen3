@@ -17,17 +17,16 @@ import { getPosts, getSinglePost } from "../../lib/ghostAPI";
 export async function getStaticPaths() {
   const posts = await getPosts();
 
-  const paths = posts.map((post) => `/blog/${post.slug}`);
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
 
-  return {
-    paths: paths, 
-    fallback: true
-  }
+  return { paths, fallback: false }
 };
 
 // Get static post
-export async function getStaticProps({ params }) {
-  const post = await getSinglePost(params.slug);
+export async function getStaticProps(context) {
+  const post = await getSinglePost(context.params.slug);
   
   // Pass post as props to render
   return { props: { post } }
@@ -48,7 +47,7 @@ function Post({ post }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossOrigin="anonymous"></link>
-        <link rel="stylesheet" href=""></link>
+
         <title>{post.meta_title} | Code Nguyen</title>
         <meta name="description" content={post.meta_description} />
         <meta name="keywords" content={post.tags.map(tag => tag.name)} />
