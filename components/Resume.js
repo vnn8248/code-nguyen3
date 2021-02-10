@@ -65,6 +65,7 @@ function Resume() {
                   name="sass"
                 />
                 <Tech
+                  used={true}
                   alt="Bootstrap"
                   name="bootstrap"
                 />
@@ -73,6 +74,7 @@ function Resume() {
                   name="ejs"
                 />
                 <Tech
+                  used={true}
                   alt="Express"
                   name="express"
                 />
@@ -128,6 +130,11 @@ function Resume() {
                   used={true}
                   alt="VSCode"
                   name="vscode"
+                />
+                <Tech 
+                  used={true}
+                  alt="Vercel"
+                  name="vercel"
                 />
               </ul>
             </div>
