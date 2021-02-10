@@ -43,7 +43,7 @@ function Home( { posts, pages } ) {
         <title>Code Nguyen | {home}</title>
       </Head>
       <Navbar />
-      <Header />
+      <Header src="bn"/>
       <About content={pages}/>
       <Resume />
       <Portfolio />
