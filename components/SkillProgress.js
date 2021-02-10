@@ -7,7 +7,7 @@ function SkillProgress(props) {
   const src = "/svg/" + logo + ".svg";
   return (
     <li className={styles.skillRow}>
-      <Image src={logo} alt={props.alt} width={50} height={50} />
+      <Image src={src} alt={props.alt} width={50} height={50} />
       <h3>{props.name}</h3>
       <div className={styles.progress}>
         <div style={{width: `${props.now}%`, backgroundColor: `${props.color}`}}></div>
