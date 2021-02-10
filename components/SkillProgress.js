@@ -2,7 +2,9 @@ import styles from "../styles/modules/SkillProgress.module.scss";
 import Image from "next/image";
 
 function SkillProgress(props) {
-  const logo = `/svg/${props.name}.svg`;
+
+  const logo = props.name;
+  const src = "/svg/" + logo + ".svg";
   return (
     <li className={styles.skillRow}>
       <Image src={logo} alt={props.alt} width={50} height={50} />
