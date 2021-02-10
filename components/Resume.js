@@ -60,7 +60,7 @@ function Resume() {
                 <Tech
                   used={true}
                   alt="Sass logo"
-                  name="Sass"
+                  name="sass"
                 />
                 <Tech
                   alt="Bootstrap logo"
