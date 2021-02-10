@@ -20,7 +20,7 @@ function About(props) {
           <div className={styles.column}>
             <div dangerouslySetInnerHTML={{__html: content}}></div>
 
-            <a href="/pdf/resume.pdf" download>
+            <a href="/pdf/Resume.pdf" download>
               <Button className={styles.btnLight}>
                 <span className={styles.icon}>
                   <i className="fas fa-cloud-download-alt fa-lg"></i>
