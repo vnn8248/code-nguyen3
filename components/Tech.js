@@ -5,7 +5,7 @@ function Tech(props) {
   return (
       <li className={styles.techItem}>
         {props.used && <div className={styles.used}></div>}
-        <Image src={`/svg/${props.name}.svg`} alt={props.alt} width={50} height={50}/>
+        <Image src={`/svg/${props.name}.svg`} alt={props.alt} className={styles.logo} width={50} height={50}/>
         <h5>{props.name}</h5>
       </li>
   );
