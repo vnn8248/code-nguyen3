@@ -18,19 +18,19 @@ function Resume() {
           <div>
           <ul className="frontEnd">
               <SkillProgress 
-                name="Html"
+                name="html"
                 alt="HTML"
                 color="#e07a5f"
                 now="75"
               />
               <SkillProgress 
-                name="CSS"
+                name="css"
                 alt="CSS"
                 color="#3d405b"
                 now="75"
               />
               <SkillProgress 
-                name="JavaScript"
+                name="javascript"
                 alt="JavaScript"
                 color="#f2cc8f"
                 now="80"
@@ -38,12 +38,14 @@ function Resume() {
             </ul>
             <ul className="backEnd">
               <SkillProgress 
-                name="NodeJS"
+                name="nodejs"
+                alt="Node.JS"
                 color="#81b29a"
                 now="70"
               />
               <SkillProgress
-                name="MongoDB"
+                name="mongodb"
+                alt="MongoDB"
                 color="#81b29a"
                 now="60"
               />
@@ -59,34 +61,34 @@ function Resume() {
               <ul>
                 <Tech
                   used={true}
-                  alt="Sass logo"
+                  alt="Sass"
                   name="sass"
                 />
                 <Tech
-                  alt="Bootstrap logo"
-                  name="Bootstrap"
+                  alt="Bootstrap"
+                  name="bootstrap"
                 />
                 <Tech
-                  alt="EJS logo"
-                  name="EJS"
+                  alt="EJS"
+                  name="ejs"
                 />
                 <Tech
-                  alt="Express logo"
-                  name="Express"
+                  alt="Express"
+                  name="express"
                 />
                 <Tech
-                  alt="JQuery logo"
-                  name="JQuery"
+                  alt="JQuery"
+                  name="jquery"
                 />              
                 <Tech
                   used={true}
-                  alt="React logo"
-                  name="ReactJS"
+                  alt="React.JS"
+                  name="reactjs"
                 />   
                 <Tech
                   used={true}
-                  alt="Next logo"
-                  name="NextJS"
+                  alt="Next.JS"
+                  name="nextjs"
                 />   
               </ul>
             </div>
@@ -94,38 +96,38 @@ function Resume() {
               <h4 className="heading">Tools</h4>
               <ul>
                 <Tech 
-                  alt="Atom logo"
-                  name="Atom"
+                  alt="Atom"
+                  name="atom"
                 />
                 <Tech 
                   used={true}
-                  alt="Git logo"
-                  name="Git"
+                  alt="Git"
+                  name="git"
                 />
                 <Tech 
                   used={true}
-                  alt="Github logo"
-                  name="Github"
+                  alt="Github"
+                  name="github"
                 />
                 <Tech 
                   used={true}
-                  alt="Heroku logo"
-                  name="Heroku"
+                  alt="Heroku"
+                  name="heroku"
                 />
                 <Tech 
                   used={true}
-                  alt="NPM logo"
-                  name="NPM"
+                  alt="NPM"
+                  name="npm"
                 />
                 <Tech 
                   used={true}
-                  alt="Postman logo"
-                  name="Postman"
+                  alt="Postman"
+                  name="postman"
                 />
                 <Tech 
                   used={true}
-                  alt="VSCode logo"
-                  name="VSCode"
+                  alt="VSCode"
+                  name="vscode"
                 />
               </ul>
             </div>
@@ -134,25 +136,25 @@ function Resume() {
               <h4 className="heading">CMS</h4>
                <ul>
                 <Tech 
-                   alt="Strapi logo"
-                   name="Strapi"
+                   alt="Strapi"
+                   name="strapi"
                 />
                 <Tech 
                   used={true}
-                   alt="Ghost logo"
-                   name="Ghost"
+                   alt="Ghost"
+                   name="ghost"
                  />
                 <Tech 
-                   alt="Squarespace logo"
-                   name="Squarespace"
+                   alt="Squarespace"
+                   name="squarespace"
                  />
                 <Tech 
-                   alt="Contentful logo"
-                   name="Contentful"
+                   alt="Contentful"
+                   name="contentful"
                  />
                 <Tech 
-                   alt="Craft logo"
-                   name="Craft"
+                   alt="Craft"
+                   name="craft"
                  />
                </ul> 
             </div>
