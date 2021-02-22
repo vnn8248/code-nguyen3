@@ -60,7 +60,7 @@ function ContactForm() {
       axios.post(process.env.CN_API_URL, formData)
         .then(res => {
           console.log(res);
-          if (res.data.status === "sent") {
+          if (res.data.response === "250 Message received") {
             setFormData(prevValue => {
               return {
                 ...prevValue,
