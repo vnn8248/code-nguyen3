@@ -6,7 +6,9 @@ import Button from 'react-bootstrap/Button';
 
 function About(props) {
 
-  const content = props.content[0].html;
+  const section =  props.content.filter(section => section.slug === "about");
+  const content = section[0].html;
+  console.log(content);
 
   return (
     <section id="about" className={styles.about}>

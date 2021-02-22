@@ -3,9 +3,8 @@
 
 .outer {
     border-bottom: 1px solid rgba($dark-background-color, 0.1);
-    // box-shadow: 3px 0px 8px rgba($dark-background-color, 5%);
 }
 
-.cardContainer {
-    @extend .cardContainer;
+.inner {
+    // @extend .cardContainer;
 }

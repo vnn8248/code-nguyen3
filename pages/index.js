@@ -32,6 +32,8 @@ function Home( { posts, pages } ) {
   console.log(posts);
   console.log(pages);
 
+  
+
   return (
     <div>
       <Head>
@@ -46,7 +48,7 @@ function Home( { posts, pages } ) {
       <Header src="bn"/>
       <About content={pages}/>
       <Resume />
-      <Portfolio />
+      <Portfolio content={pages}/>
       <Blog 
         home={true}
         posts={posts}  
