@@ -14,7 +14,7 @@ import { getPosts, getPages } from "../lib/ghostAPI";
 // Site title
 const home = "Home";
 
-// Get all blog posts
+// Get all blog posts and home page section content
 export async function getStaticProps() {
   const posts = await getPosts();
   const pages = await getPages();
@@ -45,13 +45,11 @@ function Home( { posts, pages } ) {
         <title>Code Nguyen | {home}</title>
       </Head>
       <Navbar />
-      <Header src="bn"/>
+      <Header />
       <About content={pages}/>
       <Resume />
       <Portfolio content={pages}/>
-      <Blog 
-        home={true}
-        posts={posts}  
+      <Blog posts={posts}  
       />
       <Footer />
 

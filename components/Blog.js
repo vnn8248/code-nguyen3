@@ -9,7 +9,7 @@ function Blog(props) {
   return (
     <section id="blog" className={styles.outer}>
       <div className="container">
-        {props.home && 
+
         <div>
           <h2 className="heading">Code Nguyen. The Blog.</h2>    
           <div className={styles.cardContainer}>
@@ -28,7 +28,7 @@ function Blog(props) {
           </div>
       
         </div> 
-        }
+        
       </div>
     </section>
   )

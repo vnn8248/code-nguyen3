@@ -3,11 +3,11 @@ import styles from "../styles/modules/PortfolioCard.module.scss";
 
 function PortfolioCard(props) {
 
-  const work = props.work;
-  console.log(work);
+  const content = props.content;
+  console.log(content);
 
   return (
-      <div className={styles.card} dangerouslySetInnerHTML={{__html: work}}></div>
+      <div className={styles.card} dangerouslySetInnerHTML={{__html: content}}></div>
   )
 };
 

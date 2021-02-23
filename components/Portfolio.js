@@ -13,7 +13,7 @@ function Portfolio(props) {
       <div className="container">
         <h2 className="heading">Code Nguyen. The Portfolio.</h2>
         <div className={styles.inner}>
-          <PortfolioCard work={content}/>
+          <PortfolioCard content={content}/>
         </div>
       </div>
     </section>

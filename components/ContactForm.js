@@ -9,6 +9,7 @@ function ContactForm() {
     name: "",
     email: "",
     message: "",
+    url: "",
     sent: false,
     buttonText: "Submit"
   });
@@ -35,7 +36,15 @@ function ContactForm() {
   };
 
   function validateForms() {
-    const { name, email, message } = formData;
+    const { name, email, message, url } = formData;
+
+    // Antispam check
+    if (url !== "") {
+      alert("Thanks. We'll get back to you as soon as possible.");
+      return false;
+    }
+
+    // Check if fields are empty
     if (name === "" || email === "" || message === "") {
       setFormData(prevValue => {
         return {
@@ -80,45 +89,47 @@ function ContactForm() {
 
   return (
     <form className={styles.contactForm}>
-    <div className={styles.formInputRow}>
-      <input 
+      <div className={styles.formInputRow}>
+        <input 
+          type="text" 
+          name="name" 
+          placeholder="Your Name" 
+          className={styles.formInput} 
+          required
+          onChange={handleChange}
+          value={formData.name}
+          />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="your@email.com" 
+          className={styles.formInput} 
+          required
+          onChange={handleChange} 
+          value={formData.email} 
+          />
+      </div>
+      <p className={styles.antispam}>Please leave this empty: 
+        <input type="text" name="url" value={formData.url} onChange={handleChange}></input>
+      </p>
+      <textarea 
         type="text" 
-        name="name" 
-        placeholder="Your Name" 
-        className={styles.formInput} 
-        required
-        onChange={handleChange}
-        value={formData.name}
-        />
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="your@email.com" 
-        className={styles.formInput} 
+        name="message" 
+        placeholder="Please write your message here" 
+        className={styles.formMessage} 
         required
         onChange={handleChange} 
-        value={formData.email} 
+        value={formData.message}
         />
-    </div>
-    <p className={styles.antispam}>Please leave this empty: <input type="text" name="url"></input></p>
-    <textarea 
-      type="text" 
-      name="message" 
-      placeholder="Please write your message here" 
-      className={styles.formMessage} 
-      required
-      onChange={handleChange} 
-      value={formData.message}
-      />
-    <button 
-      type="submit" 
-      className={`btn ${styles.formSubmit}`} 
-      onClick={submit} 
-      value={formData.buttonText}
-    >
-      {formData.buttonText}
-    </button>
-  </form>
+      <button 
+        type="submit" 
+        className={`btn ${styles.formSubmit}`} 
+        onClick={submit} 
+        value={formData.buttonText}
+      >
+        {formData.buttonText}
+      </button>
+    </form>
   )
 }
 
