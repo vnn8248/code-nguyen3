@@ -15,6 +15,7 @@
 
     &:hover {
         transform: scale(1.05);
+        box-shadow: 2px 2px 3px 1px $palette-4;
     }
 
     img {
