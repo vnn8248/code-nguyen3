@@ -32,8 +32,6 @@ function Home({ posts, pages }) {
   console.log(posts);
   console.log(pages);
 
-
-
   return (
     <div>
       <Head>
