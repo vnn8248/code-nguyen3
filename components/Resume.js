@@ -16,20 +16,20 @@ function Resume() {
         <div>
           <h2 className="heading">Skills. Front to Back.</h2>
           <div>
-          <ul className="frontEnd">
-              <SkillProgress 
+            <ul className="frontEnd">
+              <SkillProgress
                 name="html"
                 alt="HTML"
                 color="#e07a5f"
                 now="75"
               />
-              <SkillProgress 
+              <SkillProgress
                 name="css"
                 alt="CSS"
                 color="#3d405b"
                 now="75"
               />
-              <SkillProgress 
+              <SkillProgress
                 name="javascript"
                 alt="JavaScript"
                 color="#f2cc8f"
@@ -37,7 +37,7 @@ function Resume() {
               />
             </ul>
             <ul className="backEnd">
-              <SkillProgress 
+              <SkillProgress
                 name="nodejs"
                 alt="Node.JS"
                 color="#81b29a"
@@ -81,57 +81,61 @@ function Resume() {
                 <Tech
                   alt="JQuery"
                   name="jquery"
-                />              
+                />
                 <Tech
                   used={true}
                   alt="React.JS"
                   name="reactjs"
-                />   
+                />
                 <Tech
                   used={true}
                   alt="Next.JS"
                   name="nextjs"
-                />   
+                />
+                <Tech
+                  alt="Angular.JS"
+                  name="angular"
+                />
               </ul>
             </div>
             <div className={styles.col}>
               <h4 className="heading">Tools</h4>
               <ul>
-                <Tech 
+                <Tech
                   alt="Atom"
                   name="atom"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="Git"
                   name="git"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="Github"
                   name="github"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="Heroku"
                   name="heroku"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="NPM"
                   name="npm"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="Postman"
                   name="postman"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="VSCode"
                   name="vscode"
                 />
-                <Tech 
+                <Tech
                   used={true}
                   alt="Vercel"
                   name="vercel"
@@ -141,29 +145,29 @@ function Resume() {
 
             <div className={styles.col}>
               <h4 className="heading">CMS</h4>
-               <ul>
-                <Tech 
-                   alt="Strapi"
-                   name="strapi"
+              <ul>
+                <Tech
+                  alt="Strapi"
+                  name="strapi"
                 />
-                <Tech 
+                <Tech
                   used={true}
-                   alt="Ghost"
-                   name="ghost"
-                 />
-                <Tech 
-                   alt="Squarespace"
-                   name="squarespace"
-                 />
-                <Tech 
-                   alt="Contentful"
-                   name="contentful"
-                 />
-                <Tech 
-                   alt="Craft"
-                   name="craft"
-                 />
-               </ul> 
+                  alt="Ghost"
+                  name="ghost"
+                />
+                <Tech
+                  alt="Squarespace"
+                  name="squarespace"
+                />
+                <Tech
+                  alt="Contentful"
+                  name="contentful"
+                />
+                <Tech
+                  alt="Craft"
+                  name="craft"
+                />
+              </ul>
             </div>
           </div>
         </div>
@@ -172,8 +176,8 @@ function Resume() {
       </div>
 
     </section>
-    
-    
+
+
   )
 }
 
