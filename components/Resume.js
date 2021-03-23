@@ -167,10 +167,6 @@ function Resume() {
                   alt="Contentful"
                   name="contentful"
                 />
-                <Tech
-                  alt="Craft"
-                  name="craft"
-                />
               </ul>
             </div>
           </div>
