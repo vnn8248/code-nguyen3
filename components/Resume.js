@@ -111,6 +111,11 @@ function Resume() {
                 />
                 <Tech
                   used={true}
+                  alt="Chrome Dev Tools"
+                  name="chrome"
+                />
+                <Tech
+                  used={true}
                   alt="Git"
                   name="git"
                 />
