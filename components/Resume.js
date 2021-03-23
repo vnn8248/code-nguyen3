@@ -96,6 +96,10 @@ function Resume() {
                   alt="Angular.JS"
                   name="angular"
                 />
+                <Tech
+                  alt="Typescript"
+                  name="typescript"
+                />
               </ul>
             </div>
             <div className={styles.col}>
