@@ -6,6 +6,28 @@
     color: $dark-font-color;
 }
 
+.top {
+
+    padding-left: 80px;
+    padding-right: 80px;
+
+    .description {
+        margin: 50px auto;
+        text-align: center;
+        max-width: 500px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .stack {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
 .table {
     margin-top: 20px;
     padding: 20px;

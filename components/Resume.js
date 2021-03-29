@@ -2,7 +2,6 @@
 import styles from "../styles/modules/Resume.module.scss"
 
 // Components
-import SkillProgress from "./SkillProgress";
 import Tech from "./Tech";
 
 
@@ -11,45 +10,29 @@ function Resume() {
     <section id="skills" className={styles.resume}>
 
       <div className="container">
-
-        {/* Progress bars */}
-        <div>
+        <div className={styles.top}>
           <h2 className="heading">Skills. Front to Back.</h2>
-          <div>
-            <ul className="frontEnd">
-              <SkillProgress
-                name="html"
-                alt="HTML"
-                color="#e07a5f"
-                now="75"
-              />
-              <SkillProgress
-                name="css"
-                alt="CSS"
-                color="#3d405b"
-                now="75"
-              />
-              <SkillProgress
-                name="javascript"
-                alt="JavaScript"
-                color="#f2cc8f"
-                now="80"
-              />
-            </ul>
-            <ul className="backEnd">
-              <SkillProgress
-                name="nodejs"
-                alt="Node.JS"
-                color="#81b29a"
-                now="70"
-              />
-              <SkillProgress
-                name="mongodb"
-                alt="MongoDB"
-                color="#81b29a"
-                now="60"
-              />
-            </ul>
+          <p className={styles.description}>I enjoy coding in all things <em><u>JavaScript</u></em>. Although my preferred stack is <strong>MERN</strong>, I can't hold back my wandering soul. These are all the techs and tools I enjoy using the most.</p>
+          <div className={styles.stack}>
+            <Tech 
+              alt="MongoDB"
+              name="mongodb"
+            />
+            <Tech 
+              used={true}
+              alt="Express.JS"
+              name="express"
+            />
+            <Tech 
+              used={true}
+              alt="React.JS"
+              name="reactjs"
+            />
+            <Tech 
+              used={true}
+              alt="Node.JS"
+              name="nodejs"
+            />
           </div>
         </div>
 
@@ -60,9 +43,8 @@ function Resume() {
               <h4 className="heading">Frameworks</h4>
               <ul>
                 <Tech
-                  used={true}
-                  alt="Sass"
-                  name="sass"
+                  alt="Angular.JS"
+                  name="angular"
                 />
                 <Tech
                   used={true}
@@ -93,8 +75,9 @@ function Resume() {
                   name="nextjs"
                 />
                 <Tech
-                  alt="Angular.JS"
-                  name="angular"
+                  used={true}
+                  alt="Sass"
+                  name="sass"
                 />
                 <Tech
                   alt="Typescript"
@@ -177,7 +160,7 @@ function Resume() {
           </div>
         </div>
 
-        <h4 className={styles.used}>These techs were used for building this site.</h4>
+        <p className={styles.used}>These techs were used for building this site.</p>
       </div>
 
     </section>
