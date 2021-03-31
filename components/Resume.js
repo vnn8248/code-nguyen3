@@ -14,21 +14,21 @@ function Resume() {
           <h2 className="heading">Skills. Front to Back.</h2>
           <p className={styles.description}>I enjoy coding in all things <em><u>JavaScript</u></em>. Although my preferred stack is <strong>MERN</strong>, I can't hold back my wandering soul. These are all the techs and tools I enjoy using the most.</p>
           <div className={styles.stack}>
-            <Tech 
+            <Tech
               alt="MongoDB"
               name="mongodb"
             />
-            <Tech 
+            <Tech
               used={true}
               alt="Express.JS"
               name="express"
             />
-            <Tech 
+            <Tech
               used={true}
               alt="React.JS"
               name="reactjs"
             />
-            <Tech 
+            <Tech
               used={true}
               alt="Node.JS"
               name="nodejs"
@@ -40,7 +40,7 @@ function Resume() {
         <div className={styles.table}>
           <div className={styles.row}>
             <div className={styles.col}>
-              <h4 className="heading">Frameworks</h4>
+              <h5 className="">Frameworks/ Libraries</h5>
               <ul>
                 <Tech
                   alt="Angular.JS"
@@ -57,12 +57,21 @@ function Resume() {
                 />
                 <Tech
                   used={true}
-                  alt="Express"
+                  alt="Express.JS"
                   name="express"
                 />
                 <Tech
-                  alt="JQuery"
+                  alt="jQuery"
                   name="jquery"
+                />
+                <Tech
+                  alt="mongoose.JS"
+                  name="mongoose"
+                />
+                <Tech
+                  used={true}
+                  alt="Next.JS"
+                  name="nextjs"
                 />
                 <Tech
                   used={true}
@@ -70,9 +79,8 @@ function Resume() {
                   name="reactjs"
                 />
                 <Tech
-                  used={true}
-                  alt="Next.JS"
-                  name="nextjs"
+                  alt="Redux"
+                  name="redux"
                 />
                 <Tech
                   used={true}
@@ -86,7 +94,7 @@ function Resume() {
               </ul>
             </div>
             <div className={styles.col}>
-              <h4 className="heading">Tools</h4>
+              <h5 className="">Tools</h5>
               <ul>
                 <Tech
                   alt="Atom"
@@ -104,13 +112,17 @@ function Resume() {
                 />
                 <Tech
                   used={true}
-                  alt="Github"
+                  alt="GitHub"
                   name="github"
                 />
                 <Tech
                   used={true}
                   alt="Heroku"
                   name="heroku"
+                />
+                <Tech
+                  alt="MongoDB Atlas"
+                  name="mongodb"
                 />
                 <Tech
                   used={true}
@@ -136,11 +148,11 @@ function Resume() {
             </div>
 
             <div className={styles.col}>
-              <h4 className="heading">CMS</h4>
+              <h5 className="">CMS</h5>
               <ul>
                 <Tech
-                  alt="Strapi"
-                  name="strapi"
+                  alt="Contentful"
+                  name="contentful"
                 />
                 <Tech
                   used={true}
@@ -152,8 +164,8 @@ function Resume() {
                   name="squarespace"
                 />
                 <Tech
-                  alt="Contentful"
-                  name="contentful"
+                  alt="Strapi"
+                  name="strapi"
                 />
               </ul>
             </div>
