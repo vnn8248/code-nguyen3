@@ -37,6 +37,10 @@ function Home({ posts, pages }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Code Nguyen" />
+        <meta property="og:description" content="Welcome to Bi Nguyen's online portfolio!" />
+        <meta property="og:image" href="/jpg/home.jpg" />
+        <meta property="og:url" content="https://www.codenguyen.com" />
         <link rel="icon" type="image/svg+xml" href="/svg/avataaars-bn.svg" />
         <link rel="alternate icon" href="/ico/avataaars-bn.ico"></link>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossOrigin="anonymous"></link>
