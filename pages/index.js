@@ -37,13 +37,13 @@ function Home({ posts, pages }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Code Nguyen" />
-        <meta property="og:description" content="Welcome to Bi Nguyen's online portfolio!" />
-        <meta property="og:image" content="https://www.codenguyen.com/jpg/home.jpg" />
-        <meta property="og:url" content="https://www.codenguyen.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Code Nguyen" />
-        <meta property="og:locale" content="en_US" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Code Nguyen" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Welcome to Bi Nguyen's online portfolio!" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://www.codenguyen.com/jpg/home.jpg" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://www.codenguyen.com" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Code Nguyen" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:locale" content="en_US" />
 
 
         <link rel="icon" type="image/svg+xml" href="/svg/avataaars-bn.svg" />
